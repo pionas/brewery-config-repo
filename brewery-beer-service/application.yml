@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: brewery-beer-service
   datasource:
     url: jdbc:h2:mem:brewery-beer-service;MODE=MYSQL
     username: sa
@@ -11,12 +9,11 @@ spring:
       enabled: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: true
   artemis:
     user: artemis-user
     password: "{cipher}AQAWk3QPX99b99Id6nJ2xJysiyJXPpCyEMCJIb2ZgYSKspkaIuQJmFXKp7jyWrhJW8kDQPzmXzaSXtyZC9n5GoV5wdgUyTOqr61kGc5/bLD9yCC1uQo2Qyv37Wdg90xOr7n1nw506/fFk8Hrj543KfC3b0d8Qc2kEtZCkRTbCzXX8UUOGJ5emV72B/m9gxThrNBbgMAd05rqB9QQqcP44pZNOrnm3wvjw4MITYyJpFO32mYa2ddJO9XHMGiER2G9laF/MGo7G/Vyq0/t+AHNpYHTEaArO1ENPGbdJWbC6+4IjMgSj/TiM8OLYqFCzqGeAEqf6PRU0SKkzThKAYte0mtq7SOUQj5O8iLh2cCDuFooA8RUTmNRASKKzJ6zWf3XNDMaJ22SP8bzjdonuf79M0Rz"
   liquibase:
-    change-log: classpath:db/changelog/dbchangelog-local.xml
+    change-log: classpath:db/changelog/dbchangelog-prod.xml
   cloud:
     openfeign:
       circuitbreaker:
@@ -47,7 +44,7 @@ queue:
 scheduler:
   lock-at-least-for: PT5M
   cron:
-    inventory-checking: "0 */1 * * * *"
+    inventory-checking: "0 0 */1 * * *"
 
 rest:
   inventory:
