@@ -1,8 +1,6 @@
 spring:
   zipkin:
     enabled: false
-  main:
-    web-application-type: reactive
 logging:
   level:
     org.springframework.cloud.gateway: debug
