@@ -4,3 +4,13 @@ author:
 
 company:
   name: Excellent App
+
+logging:
+  pattern:
+    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  include-application-name: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1
