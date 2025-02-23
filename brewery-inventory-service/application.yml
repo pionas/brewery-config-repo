@@ -12,6 +12,10 @@ spring:
   artemis:
     user: artemis-user
     password: "{cipher}ad2c0c2082a365c4824c818db0b4f6b760f6ef438c195bfcfd92082d1d80b0441704774823c6393c3965f7d8f0671c35"
+  security:
+    user:
+      name: beer-inventory-user
+      password: "{cipher}fddfadd403c7888c67239e68a473ad8247f5512fc00c60500d469106c96c8afe"
 
 queue:
   inventory:

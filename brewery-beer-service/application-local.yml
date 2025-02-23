@@ -49,7 +49,9 @@ scheduler:
 
 rest:
   inventory:
-    service: "http://localhost:8081/api/v1/inventories/"
+    service: "http://localhost:9001/api/v1/inventories/"
+    username: beer-inventory-user
+    password: "{cipher}fddfadd403c7888c67239e68a473ad8247f5512fc00c60500d469106c96c8afe"
   gateway:
     service: "http://localhost:9001/"
 
