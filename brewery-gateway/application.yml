@@ -7,3 +7,12 @@ logging:
 
 server:
   port: 9001
+
+eureka:
+  username: netflix
+  password: "{cipher}b0cb044ba3ebccd70a74dabc001df934d39851c11724918844a4d5e46c87a633"
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.username}:${eureka.password}@localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
