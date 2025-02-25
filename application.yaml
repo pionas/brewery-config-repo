@@ -5,15 +5,6 @@ author:
 company:
   name: Excellent App
 
-logging:
-  pattern:
-    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
-  include-application-name: false
-  level:
-    pl.excellentapp.brewery: DEBUG
-    org.springframework.cloud: DEBUG
-    org.springframework.web: DEBUG
-
 management:
   tracing:
     sampling:
